@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Update Stocks</title>
+</head>
+<body>
+  <h2>Select a category to view stocks:</h2>
+  <select id="categorySelect" onchange="populateItems()">
+    <option value="jeans">Jeans</option>
+    <option value="shirts">Shirts</option>
+    <option value="perfumes">Perfumes</option>
+    <option value="sando">Sando</option>
+    <option value="toys">Toys</option>
+  </select>
+  <br><br>
+  <label for="itemSelect">Select an item:</label>
+  <select id="itemSelect"></select>
+  <br><br>
+  <label for="stockInput">Number of Stocks:</label>
+  <input type="number" id="stockInput" min="0" value="0">
+  <br><br>
+  <button onclick="updateStocks()">Update Stocks</button>
+  <button onclick="closeWindow()">Close</button>
+
+  <script>
+    // Initial data setup for the first time
+    const initialData = {
+      jeans: {
+        "Denim Shorts": 10,
+        "Maong Shorts": 15,
+        "Cargo Jeans": 20,
+        "Straight Cut Jeans": 8
+      },
+      shirts: {
+        "V Neck Shirt": 14,
+        "Crew Neck Shirt": 25,
+        "Polo Shirt": 17,
+        "Sweat Shirt": 3
+      },
+      perfumes: {
+        "Pear and Freesia": 5,
+        "Miss Dior": 10,
+        "Sweet Night": 9,
+        "Calvin Klein": 2
+      },
+      sando: {
+        "White Sando": 45,
+        "Dri-Fit Black Sando": 28,
+        "Sleeveless Crop Top": 12,
+        "Square Neck Top": 16
+      },
+      toys: {
+        "Kitchen Set": 5,
+        "Claw Machine": 11,
+        "Pokemon Toy Set": 19,
+        "Race Track": 7
+      }
+    };
+
+    // Ensure initial data is in localStorage
+    Object.keys(initialData).forEach(category => {
+      if (!localStorage.getItem(category)) {
+        localStorage.setItem(category, JSON.stringify(initialData[category]));
+      }
+    });
+
+    function getStocksByCategory(category) {
+      var stocks = localStorage.getItem(category);
+      return stocks ? JSON.parse(stocks) : {};
+    }
+
+    function populateItems() {
+      var category = document.getElementById("categorySelect").value;
+      var stocks = getStocksByCategory(category);
+      var itemSelect = document.getElementById("itemSelect");
+      itemSelect.innerHTML = "";
+
+      for (var item in stocks) {
+        var option = document.createElement("option");
+        option.value = item;
+        option.textContent = item;
+        itemSelect.appendChild(option);
+      }
+
+      // Set the stock input to the selected item's stock
+      updateStockInput();
+    }
+
+    function updateStockInput() {
+      var category = document.getElementById("categorySelect").value;
+      var itemSelect = document.getElementById("itemSelect").value;
+      var stocks = getStocksByCategory(category);
+
+      var stockInput = document.getElementById("stockInput");
+      stockInput.value = stocks[itemSelect] || 0;
+    }
+
+    function updateStocks() {
+      var category = document.getElementById("categorySelect").value;
+      var itemSelect = document.getElementById("itemSelect").value;
+      var stockInput = document.getElementById("stockInput").value;
+
+      if (itemSelect && stockInput !== "") {
+        var stocks = getStocksByCategory(category);
+        stocks[itemSelect] = parseInt(stockInput);
+        localStorage.setItem(category, JSON.stringify(stocks));
+        alert("Stocks updated successfully!");
+      } else {
+        alert("Please select an item and enter a valid stock quantity.");
+      }
+    }
+
+    function closeWindow() {
+      window.close();
+    }
+
+    // Event listener to update the stock input when the item changes
+    document.getElementById("itemSelect").addEventListener("change", updateStockInput);
+
+    // Initialize items on page load
+    document.addEventListener("DOMContentLoaded", () => {
+      populateItems();
+      updateStockInput();
+    });
+  </script>
+</body>
+</html>

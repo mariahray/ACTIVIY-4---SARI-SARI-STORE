@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clothing Store</title>
+  <link rel="stylesheet" href="simplejoys.css">
+</head>
+<body>
+  <img src="simple_joys_logo.png" class="logo">
+  <div class="container">
+    <button onclick="toggleCategory('jeans')">JEANS</button>
+	
+    <div id="jeans" class="items-container hidden">
+      <div class="item">
+        <img src="denim shorts.jpg">
+        <h2 >Denim Shorts</h2>
+        <span class="price">280.00</span>
+        <p style="font-size:30px;">Stock: <span class="stock" style="font-size:30px;" data-item="Denim Shorts">10</span></p>
+        <div class="quantity">
+          Quantity: <button class="decrement">-</button>
+          <span class="quantity-value">0</span>
+          <button class="increment">+</button>
+        </div>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+     <div class="item">
+	    <img src="maong shorts.jpg">
+        <h2 style="padding-top:35px">Maong Shorts</h2>
+        <span class="price">200.00</span>
+        <p style="font-size:30px;">Stock: <span class="stock" style="font-size:30px;" data-item="Maong Shorts">15</span></p>
+				 
+
+        <div class="quantity">
+          Quantity: <button class="decrement">-</button>
+          <span class="quantity-value">0</span>
+          <button class="increment">+</button>
+        </div>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+	  <div class="item">
+	    <img src="cargo-jeans.jpg">
+        <h2 style="padding-top:10px"> Cargo Jeans</h2>
+        <span class="price">390.00</span>
+        <p style="font-size:30px;">Stock: <span class="stock" style="font-size:30px;" data-item="Cargo Jeans">20</span></p>
+		
+        <div class="quantity">
+          Quantity: <button class="decrement">-</button>
+          <span class="quantity-value">0</span>
+          <button class="increment">+</button>
+        </div>
+        <button class="add-to-cart">Add to Cart</button>
+    </div>
+	<div class="item">
+	    <img src="jeans for men.jpg">
+        <h2 style="padding-top:90px;">Straigh Cut Jeans</h2>
+        <span class="price">300.00</span>
+        <p style="font-size:30px;">Stock: <span class="stock" style="font-size:30px;" data-item="Straight Cut Jeans">8</span></p>
+				
+        <div class="quantity">
+          Quantity: <button class="decrement">-</button>
+          <span class="quantity-value">0</span>
+          <button class="increment">+</button>
+        </div>
+        <button class="add-to-cart">Add to Cart</button>
+    </div>
+	
+	</div>
+   
+
+    <button onclick="toggleCategory('shirts')">TSHIRTS</button>
+<div id="shirts" class="items-container hidden">
+      <div class="item">
+        <img src="vneck.png">
+        <h2>V Neck Shirt</h2>
+        <span class="price">100.00</span>
+        <p style="font-size:30px;">Stock: <span class="stock" style="font-size:30px;" data-item="V Neck Shirt">14</span></p>
+        <div class="quantity">
+          Quantity: <button class="decrement">-</button>
+          <span class="quantity-value">0</span>
+          <button class="increment">+</button>
+        </div>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+      <div class="item">
+	    <img src="crewneck.png">
+        <h2 style="padding-top:95px">Crew Neck Shirt</h2>
+        <span class="price">90.00</span>
+        <p style="font-size:30px;">Stock: <span class="stock" style="font-size:30px;" data-item="Crew Neck Shirt">25</span></p>
+				
+
+        <div class="quantity">
+          Quantity: <button class="decrement">-</button>
+          <span class="quantity-value">0</span>
+          <button class="increment">+</button>
+        </div>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+	  <div class="item">
+	    <img src="polo shirt.jpg">
+        <h2>Polo Shirt</h2>
+        <span class="price">190.00</span>
+        <p style="font-size:30px;">Stock: <span class="stock" style="font-size:30px;" data-item="Polo Shirt">17</span></p>
+		
+
+        <div class="quantity">
+          Quantity: <button class="decrement">-</button>
+          <span class="quantity-value">0</span>
+          <button class="increment">+</button>
+        </div>
+        <button class="add-to-cart">Add to Cart</button>
+    </div>
+	<div class="item">
+	    <img src="sweatshirt.png">
+        <h2 style="padding-top:30px">Sweat Shirt</h2>
+        <span class="price">300.00</span>
+       <p style="font-size:30px;">Stock: <span class="stock" style="font-size:30px;" data-item="Sweat Shirt">3</span></p>
+
+        <div class="quantity">
+          Quantity: <button class="decrement">-</button>
+          <span class="quantity-value">0</span>
+          <button class="increment">+</button>
+        </div>
+        <button class="add-to-cart">Add to Cart</button>
+    </div>
+	
+	</div>
+
+    <button onclick="toggleCategory('perfumes')">PERFUMES</button>
+	<div id="perfumes" class="items-container hidden">
+      <div class="item">
+        <img src="pear-and-freesia-perfume.jpg">
+        <h2 style="padding-top:65px">Pear and Freesia</h2>
+        <span class="price">700.00</span>
+        <p style="font-size:30px;">Stock: <span class="stock" style="font-size:30px;" data-item="Pear and Freesia">5</span></p>
+        <div class="quantity">
+          Quantity: <button class="decrement">-</button>
+          <span class="quantity-value">0</span>
+          <button class="increment">+</button>
+        </div>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+      <div class="item">
+	    <img src="miss dior.jpg">
+        <h2>Miss Dior</h2>
+        <span class="price">900.00</span>
+        <p style="font-size:30px;">Stock: <span class="stock" style="font-size:30px;" data-item="Miss Dior">10</span></p>
+	
+        <div class="quantity">
+          Quantity: <button class="decrement">-</button>
+          <span class="quantity-value">0</span>
+          <button class="increment">+</button>
+        </div>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+	  <div class="item">
+	    <img src="sweet night.jpg">
+        <h2 style="padding-top:85px">Sweet Night</h2>
+        <span class="price">500.00</span>
+        <p style="font-size:30px;">Stock: <span class="stock" style="font-size:30px;" data-item="Sweet Night">9</span></p>
+
+        <div class="quantity">
+          Quantity: <button class="decrement">-</button>
+          <span class="quantity-value">0</span>
+          <button class="increment">+</button>
+        </div>
+        <button class="add-to-cart">Add to Cart</button>
+    </div>
+	<div class="item">
+	    <img src="calvin-klein.jpg">
+        <h2>Calvin Klein</h2>
+        <span class="price">1000.00</span>
+        <p style="font-size:30px;">Stock: <span class="stock" style="font-size:30px;" data-item="Calvin Klein">2</span></p>
+
+        <div class="quantity">
+          Quantity: <button class="decrement">-</button>
+          <span class="quantity-value">0</span>
+          <button class="increment">+</button>
+        </div>
+        <button class="add-to-cart">Add to Cart</button>
+    </div>
+	    </div>
+
+    <button onclick="toggleCategory('sando')">SANDO</button>
+<div id="sando" class="items-container hidden">
+      <div class="item">
+        <img src="sando-men2.jpg">
+        <h2 style="padding-top:85px">White Sando</h2>
+        <span class="price">80.00</span>
+        <p style="font-size:30px;">Stock: <span class="stock" style="font-size:30px;" data-item="White Sando">45</span></p>
+        <div class="quantity">
+          Quantity: <button class="decrement">-</button>
+          <span class="quantity-value">0</span>
+          <button class="increment">+</button>
+        </div>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+     <div class="item">
+	    <img src="sando-men.jpg">
+        <h2 style="padding-top:45px">Dri-Fit Black Sando</h2>
+        <span class="price">99.00</span>
+        <p style="font-size:30px;">Stock: <span class="stock" style="font-size:30px;" data-item="Dri-Fit Black Sando">28</span></p>
+
+        <div class="quantity">
+          Quantity: <button class="decrement">-</button>
+          <span class="quantity-value">0</span>
+          <button class="increment">+</button>
+        </div>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+	  <div class="item">
+	    <img src="sando top.jpg">
+        <h2 style="padding-top:45px">Sleeveless Top</h2>
+        <span class="price">75.00</span>
+        <p style="font-size:30px;">Stock: <span class="stock" style="font-size:30px;" data-item="Sleeveless Crop Top">12</span></p>
+
+        <div class="quantity">
+          Quantity: <button class="decrement">-</button>
+          <span class="quantity-value">0</span>
+          <button class="increment">+</button>
+        </div>
+        <button class="add-to-cart">Add to Cart</button>
+    </div>
+	<div class="item">
+	    <img src="BASICSQUARENECKCROPTOP-IVORY.jpg">
+        <h2>Square Neck Top</h2>
+        <span class="price">102.00</span>
+        <p style="font-size:30px;">Stock: <span class="stock" style="font-size:30px;" data-item="Square Neck Top">16</span></p>
+
+
+        <div class="quantity">
+          Quantity: <button class="decrement">-</button>
+          <span class="quantity-value">0</span>
+          <button class="increment">+</button>
+        </div>
+        <button class="add-to-cart">Add to Cart</button>
+    </div>
+    </div>
+
+    <button onclick="toggleCategory('toys')">TOYS</button>
+<div id="toys" class="items-container hidden">
+      <div class="item">
+        <img src="kitchen-set.jpg">
+        <h2 style="padding-top:100px">Kitchen Set</h2>
+        <span class="price">580.00</span>
+        <p style="font-size:30px;">Stock: <span class="stock" style="font-size:30px;" data-item="Kitchen Set">5</span></p>
+        <div class="quantity">
+          Quantity: <button class="decrement">-</button>
+          <span class="quantity-value">0</span>
+          <button class="increment">+</button>
+        </div>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+<div class="item">
+	    <img src="claw machine.jpg">
+        <h2 style="padding-top:45px">Claw Machine</h2>
+        <span class="price">390.00</span>
+        <p style="font-size:30px;">Stock: <span class="stock" style="font-size:30px;" data-item="Claw Machine">11</span></p>
+
+        <div class="quantity">
+          Quantity: <button class="decrement">-</button>
+          <span class="quantity-value">0</span>
+          <button class="increment">+</button>
+        </div>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+	  <div class="item">
+	    <img src="pokemon toy.jpg">
+        <h2 style="padding-top:100px">Pokemon Toy Set</h2>
+        <span class="price">350.00</span>
+        <p style="font-size:30px;">Stock: <span class="stock" style="font-size:30px;" data-item="Pokemon Toy Set">19</span></p>
+        <div class="quantity">
+          Quantity: <button class="decrement">-</button>
+          <span class="quantity-value">0</span>
+          <button class="increment">+</button>
+        </div>
+        <button class="add-to-cart">Add to Cart</button>
+    </div>
+	<div class="item">
+	    <img src="race-track.jpg">
+        <h2 style="padding-top:95px">Race Track</h2>
+        <span class="price">280.00</span>
+        <p style="font-size:30px;">Stock: <span class="stock" style="font-size:30px;" data-item="Race Track">7</span></p>
+
+        <div class="quantity">
+          Quantity: <button class="decrement">-</button>
+          <span class="quantity-value">0</span>
+          <button class="increment">+</button>
+        </div>
+        <button class="add-to-cart">Add to Cart</button>
+    </div>    
+  </div>
+  <button onclick="toggleCategory('cart')">CART</button>
+	
+   <div class="cart hidden" id="cart" >
+      <ul class="cart-items"></ul>
+      <div>
+        <label for="discount">Select Discount:</label>
+        <select id="discount">
+          <option value="none">None</option>
+          <option value="PWD">PWD - 30%</option>
+          <option value="Senior">Senior - 20%</option>
+          <option value="Student">Student - 10%</option>
+        </select>
+      </div>
+      <div>Total: <span class="total">$0</span></div>
+    </div>
+	<button style="color:white;"><a href="managestocks.html">View Stock</a></button>
+  </div>
+  </div>
+  
+  <script src="simplejoys.js"></script>
+  <script>
+    function toggleCategory(categoryId) {
+    const categoryDiv = document.getElementById(categoryId);
+    categoryDiv.classList.toggle('hidden');
+  }
+   function updateStocksDisplay() {
+      const categories = ["jeans", "shirts", "perfumes", "sando", "toys"];
+      categories.forEach(category => {
+        const stocks = JSON.parse(localStorage.getItem(category)) || {};
+        Object.keys(stocks).forEach(item => {
+          const stockSpan = document.querySelector(`.stock[data-item="${item}"]`);
+          if (stockSpan) {
+            stockSpan.textContent = stocks[item];
+          }
+        });
+      });
+    }
+
+    document.addEventListener('DOMContentLoaded', updateStocksDisplay);
+  </script>
+</body>
+</html>

@@ -1,0 +1,152 @@
+body {
+  font-family: 'Canda Tawa';
+  background-image: url('bg.png');
+  background-size: 100%;
+}
+
+.logo {
+  width: 200px;
+  height: auto;
+}
+
+.container {
+  max-width: 1262px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid blue;
+  background-image: url('bg2.jpg');
+  background-size: 100%;
+  
+}
+
+.items-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  padding-left: 150px;
+  padding-top: 10px;
+}
+
+.item {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+}
+
+.cart {
+  margin-top: 20px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  font-size:30px;
+  text-align:center;
+  font-family:'Canda Tawa';
+}
+.discount{
+	padding:8px 10px;
+}
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+  
+}
+
+h1 {
+  background-color: #78C1F3;
+  border: 5px #78C1F3;
+  border-radius: 20px;
+  text-align: center;
+  font-family: 'Canda Tawa';
+  padding: 10px;
+  font-size: 60px;
+  color: #E2F6CA;
+  width: 1200px;
+}
+h2, .price, .quantity{
+	font-size:30px;
+}
+
+img {
+  width: 100%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
+}
+
+imgcontainer {
+  width: 300px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+.hidden {
+  display: none;
+}
+
+.button-container {
+  text-align: center;
+  margin: 20px 0;
+}
+
+button {
+  width: 140px;
+  height: 50px;
+  background: linear-gradient(to top, #00154c, #12376e, #23487f);
+  color: #fff;
+  border-radius: 50px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  
+}
+
+button:hover {
+  background-color: #4a8cb4;
+}
+
+button:active {
+  background-color: #2a6c84;
+}
+
+.quantity button {
+   width: 30px;
+  height: 20px;
+  background: linear-gradient(to top, #00154c, #12376e, #23487f);
+  color: #fff;
+  border-radius: 50px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+
+.quantity button:hover {
+  background-color: #45a049;
+}
+
+.add-to-cart {
+  background-color: #f44336;
+  border: none;
+  color: white;
+  padding: 10px 24px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-top: 10px;
+  cursor: pointer;
+  border-radius: 12px;
+}
+
+.add-to-cart:hover {
+  background-color: #da190b;
+}
+.ul{
+font-size:30px;
+}
